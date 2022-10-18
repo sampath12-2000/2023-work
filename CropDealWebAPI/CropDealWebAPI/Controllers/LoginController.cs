@@ -46,7 +46,7 @@ namespace CropDealWebAPI.Controllers
            
                 var CurrentUser = _dbContext.UserProfiles.FirstOrDefault(
                     u => u.UserName == login.Username
-                    && u.UserPassword == login.Password);
+                    && u.UserPassword == login.Password && u.UserType==login.Role);
                 if (CurrentUser != null)
                 {
                     return CurrentUser;

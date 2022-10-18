@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cUISUBrtCuDB9Bkbvi78dXvMJwDwSw2jx7dPsstNsD9JdA2LVdQsLOMKr8QqhYcWIA4x6fXb/pacF4voCuEYow==",
+  "dgSpecHash": "yRnd7nSNxu9fzHfU/usiXPcCttrTx7wWTZsKlp6raUZjyXN7fInErHV45af935vUDeTc2vepMkSS4Q3516qTgg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sampat\\source\\repos\\CropDealWebAPI\\CropDealWebAPI\\CropDealWebAPI.csproj",
+  "projectFilePath": "C:\\Users\\Sampat\\source\\repos\\backend-part\\CropDealWebAPI\\CropDealWebAPI\\CropDealWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sampat\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Sampat\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sampat\\source\\repos\\CropDealWebAPI\\CropDealWebAPI\\CropDealWebAPI.csproj": {}
+    "C:\\Users\\Sampat\\source\\repos\\backend-part\\CropDealWebAPI\\CropDealWebAPI\\CropDealWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sampat\\source\\repos\\CropDealWebAPI\\CropDealWebAPI\\CropDealWebAPI.csproj": {
+    "C:\\Users\\Sampat\\source\\repos\\backend-part\\CropDealWebAPI\\CropDealWebAPI\\CropDealWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sampat\\source\\repos\\CropDealWebAPI\\CropDealWebAPI\\CropDealWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Sampat\\source\\repos\\backend-part\\CropDealWebAPI\\CropDealWebAPI\\CropDealWebAPI.csproj",
         "projectName": "CropDealWebAPI",
-        "projectPath": "C:\\Users\\Sampat\\source\\repos\\CropDealWebAPI\\CropDealWebAPI\\CropDealWebAPI.csproj",
+        "projectPath": "C:\\Users\\Sampat\\source\\repos\\backend-part\\CropDealWebAPI\\CropDealWebAPI\\CropDealWebAPI.csproj",
         "packagesPath": "C:\\Users\\Sampat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sampat\\source\\repos\\CropDealWebAPI\\CropDealWebAPI\\obj\\",
+        "outputPath": "C:\\Users\\Sampat\\source\\repos\\backend-part\\CropDealWebAPI\\CropDealWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

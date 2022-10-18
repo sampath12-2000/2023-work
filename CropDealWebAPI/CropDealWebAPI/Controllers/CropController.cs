@@ -14,7 +14,7 @@ namespace CropDealWebAPI.Controllers
         {
             _cropService = cropService;
         }
-       [Authorize]
+      // [Authorize]
 
         #region GetAll
         [HttpGet]
