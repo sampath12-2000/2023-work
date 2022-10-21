@@ -14,7 +14,7 @@ namespace CropDealWebAPI.Controllers
         {
             _cropService = cropService;
         }
-      // [Authorize]
+       [Authorize(Roles ="Admin")]
 
         #region GetAll
         [HttpGet]
@@ -49,6 +49,7 @@ namespace CropDealWebAPI.Controllers
         #endregion
 
         #region Insert
+        [Authorize(Roles ="Admin")]
         [HttpPost]
         public async Task<IActionResult> Insert([Bind()] Crop entity)  
         {

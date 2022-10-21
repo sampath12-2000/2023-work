@@ -16,6 +16,7 @@ namespace CropDealWebAPI.Controllers
         }
 
         #region GetAll
+        [Authorize(Roles ="Farmer")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -50,6 +51,7 @@ namespace CropDealWebAPI.Controllers
         #endregion
 
         #region Insert
+        [Authorize(Roles ="Farmer")]
         [HttpPost]
         public async Task<IActionResult> Insert([Bind()] CropOnSale entity)
         {
