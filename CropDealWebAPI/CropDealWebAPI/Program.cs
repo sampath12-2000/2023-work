@@ -97,6 +97,9 @@ builder.Services.AddScoped<IRepository<CropOnSale>, CropOnSaleRepository>();
 builder.Services.AddScoped<CropOnSaleService, CropOnSaleService>();
 builder.Services.AddScoped<IViewCropRepository, ViewCropRepository>();
 builder.Services.AddScoped<CropViewService, CropViewService>();
+builder.Services.AddScoped<IUserIdRepository<int>, UserIdRepository>();
+builder.Services.AddScoped<UserIdService, UserIdService>();
+
 
 var app = builder.Build();
 

@@ -1,5 +1,6 @@
 ﻿using CropDealWebAPI.Controllers;
 using CropDealWebAPI.Models;
+using CropDealWebAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -15,23 +16,29 @@ namespace CropDealWebAPI.Controllers
     {
         private IConfiguration _configuration;
         private readonly CropDealDatabaseContext _dbContext;
-        public LoginController(IConfiguration configuration, CropDealDatabaseContext dBContext)
+        private readonly UserIdService _userIdService;
+        public LoginController(IConfiguration configuration, CropDealDatabaseContext dBContext,UserIdService userIdService)
         {
             _configuration = configuration;
             _dbContext = dBContext;
+            _userIdService = userIdService;
         }
 
         #region Login part
         [HttpPost]
-        public IActionResult Login([FromBody] Login login)
+        public async Task<IActionResult> Login([FromBody] Login login)
         {
-            
+            int result = await _userIdService.GetUserId(login.Email);
                 var user = Authenticate(login);
                 if (user != null)
                 {
                     var token = Generate(user);
-                    var obj = new { Token = token };
-                    return Ok(obj);
+                User user1 = new User();
+                user1.token = token;
+                user1.UserId = result;
+                   // var obj = new { Token = token };
+
+                    return Ok(user1);
 
                 }
             
@@ -45,7 +52,7 @@ namespace CropDealWebAPI.Controllers
         {
            
                 var CurrentUser = _dbContext.UserProfiles.FirstOrDefault(
-                    u => u.UserName == login.Username
+                    u => u.UserEmail == login.Email
                     && u.UserPassword == login.Password && u.UserType==login.Role);
                 if (CurrentUser != null)
                 {

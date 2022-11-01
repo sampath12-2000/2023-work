@@ -29,6 +29,18 @@ namespace CropDealWebAPI.Controllers
         }
         #endregion
 
+        #region GetAll
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+
+            var userprofiles = await _userProfileService.GetAll();
+            return Ok(userprofiles);
+
+
+        }
+        #endregion
+
         #region GetById
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById([FromRoute] int id)

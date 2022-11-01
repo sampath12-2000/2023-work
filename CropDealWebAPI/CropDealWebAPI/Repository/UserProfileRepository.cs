@@ -44,6 +44,21 @@ namespace CropDealWebAPI.Repository
 
         #endregion
 
+        #region GetAll
+        public async Task<IEnumerable<UserProfile>> GetAll()
+        {
+            try
+            {
+                return await _dbContext.UserProfiles.ToListAsync();
+
+            }
+            catch
+            {
+                return Enumerable.Empty<UserProfile>();
+            }
+        }
+        #endregion
+
         #region GetById
         public async Task<UserProfile> GetById(int id)
         {

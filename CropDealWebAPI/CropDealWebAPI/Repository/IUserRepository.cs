@@ -11,6 +11,8 @@ namespace CropDealWebAPI.Repository
     {
         #region Function Declaration
         Task<T1> Register(T1 entity);
+
+        Task<IEnumerable<T1>> GetAll();
         Task<T1> GetById(int id);
         Task<T1> Update(T1 entity);
         Task Save();

@@ -14,9 +14,10 @@ namespace CropDealWebAPI.Controllers
         {
             _cropService = cropService;
         }
-       [Authorize(Roles ="Admin")]
+
 
         #region GetAll
+        // [Authorize(Roles ="Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

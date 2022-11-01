@@ -2,6 +2,7 @@
 using CropDealWebAPI.Models;
 using CropDealWebAPI.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Data.SqlClient.Server;
 
 namespace CropDealWebAPI.Controllers
 {
@@ -16,17 +17,10 @@ namespace CropDealWebAPI.Controllers
         }
 
         #region GetAll
-        [Authorize(Roles ="Farmer")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            //return from a in db.Artists
-            //       join p in db.Projects on a.ArtistID equals p.ArtistID
-            //       select new
-            //       {
-            //           account_name = a.ArtistName,
-            //           project_name = p.ProjectName
-            //       };
+           
 
             var result = await _croponSale.GetAll();
             return Ok(result);
@@ -49,7 +43,7 @@ namespace CropDealWebAPI.Controllers
         }
 
         #endregion
-
+       
         #region Insert
         [Authorize(Roles ="Farmer")]
         [HttpPost]

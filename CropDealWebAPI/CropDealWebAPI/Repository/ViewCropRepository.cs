@@ -14,7 +14,7 @@ namespace CropDealWebAPI.Repository
             try
             {
 
-                var query = (from a in _dbContext.CropOnSales
+                var command = (from a in _dbContext.CropOnSales
                              join b in _dbContext.Crops on a.CropId equals b.CropId
                              join c in _dbContext.UserProfiles on a.FarmerId equals c.UserId
                              select new ViewCrop()
@@ -31,7 +31,7 @@ namespace CropDealWebAPI.Repository
                                  FarmerPhoneNo = c.UserPhoneNo
                              });
 
-                List<ViewCrop> list1 = query.ToList();
+                List<ViewCrop> list1 = command.ToList();
 
 
                 return list1;
